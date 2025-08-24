@@ -1,0 +1,23 @@
+{
+  "endpoints": [
+    {
+      "name": "predict-rentals",
+      "type": "real-time",
+      "url": "https://<seu-endpoint>.azurewebsites.net/score",
+      "method": "POST",
+      "description": "Prevê o número de aluguéis de bicicletas com base em variáveis climáticas e sazonais",
+      "input_example": {
+        "input_data": {
+          "columns": [
+            "day","mnth","year","season","holiday",
+            "weekday","workingday","weathersit",
+            "temp","atemp","hum","windspeed"
+          ],
+          "index": [0],
+          "data": [[1,1,2022,2,0,1,1,2,0.3,0.3,0.3,0.3]]
+        }
+      },
+      "output_example": [352.35]
+    }
+  ]
+}
